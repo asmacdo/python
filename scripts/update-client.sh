@@ -70,6 +70,6 @@ sed -i'' "s,^DEVELOPMENT_STATUS = .*,DEVELOPMENT_STATUS = \\\"${DEVELOPMENT_STAT
 # This is a terrible hack:
 # first, this must be in gen repo not here
 # second, this should be ported to swagger-codegen
-echo ">>> patching client..."
-git apply "${SCRIPT_ROOT}/rest_client_patch.diff"
-echo ">>> Done."
+# echo ">>> patching client..."
+# git apply "${SCRIPT_ROOT}/rest_client_patch.diff"
+# echo ">>> Done."

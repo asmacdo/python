@@ -18,6 +18,9 @@ are a higher than expected number of issues there can be multiple releases
 ## Automated release
 
 ### 1. Run the release script and send a PR
+Install the Kubernetes `release-notes` tool.
+`go install k8s.io/release/cmd/release-notes@latest`
+
 Generate a Github personal access token following instruction
 [link](https://docs.github.com/en/authentication/keeping-your-account-and-data-secure/creating-a-personal-access-token)
 

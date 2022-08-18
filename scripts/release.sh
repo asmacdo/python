@@ -112,7 +112,7 @@ trap return_to_kansas EXIT
 
 remote_branch=upstream/master
 if [[ $CLIENT_VERSION != *"snapshot"* ]]; then
-  remote_branch=upstream/release-"${CLIENT_VERSION%%.*}".0
+  remote_branch=origin/release-"${CLIENT_VERSION%%.*}".0
 fi
 echo "+++ Updating remotes..."
 git remote update upstream origin
@@ -141,6 +141,8 @@ if [[ $CLIENT_VERSION != *"snapshot"* ]]; then
 
   # Collect release notes from master branch
   if [[ $(git log ${remote_branch}..upstream/master | grep ^commit) ]]; then
+    echo "HEYOOOOOO"
+    echo ${remote_branch}..upstream/master
     start_sha=$(git log ${remote_branch}..upstream/master | grep ^commit | tail -n1 | sed 's/commit //g')
     end_sha=$(git log ${remote_branch}..upstream/master | grep ^commit | head -n1 | sed 's/commit //g')
     output="/tmp/python-master-relnote-$(date +%s).md"

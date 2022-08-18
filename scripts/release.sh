@@ -137,7 +137,7 @@ echo "New Kubernetes API Version: $new_k8s_api_version"
 
 # If it's an actual release, pull master branch
 if [[ $CLIENT_VERSION != *"snapshot"* ]]; then
-  git pull -X theirs upstream master --no-edit
+  git pull -X theirs upstream master --no-edit --rebase
 
   # Collect release notes from master branch
   if [[ $(git log ${remote_branch}..upstream/master | grep ^commit) ]]; then

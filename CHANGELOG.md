@@ -1,3 +1,8 @@
+# v2.0.0-snapshot
+
+Kubernetes API Version: v1.2.7
+
+
 # v24.2.0
 
 Kubernetes API Version: v1.24.2
